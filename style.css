@@ -15,7 +15,55 @@ body {
   color: white;
 }
 
+#levelStyle {
+  padding: 1px;
+  font-size: 20px;
+  text-align: center;
+  background-color: orangered;
+  margin: 0;
+  text-decoration: none;
+}
+
 img {
-  margin: 140px;
+  margin: 70px;
   opacity: 2;
+}
+
+#puzz1,
+#puzz2 {
+  height: 50px;
+  margin: 15px;
+  width: 400px;
+  color: black;
+}
+
+#btnf1,
+#btnf2 {
+  margin: 20px;
+}
+
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5,
+#btn6,
+#btn7,
+#btn8,
+#btn9,
+#btn10,
+#btn11,
+#btn12,
+#btn13,
+#btn14,
+#btn15 {
+  height: 50px;
+  width: 40px;
+}
+
+#sbtn1,
+#sbtn2 {
+  height: 50px;
+  width: 250px;
+  background-color: orangered;
 }

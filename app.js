@@ -20,11 +20,25 @@ function checkBg() {
 setInterval(checkBg, 100)
 
 // code to take input when button is ckicked and stored in array
-var arr = '';
-arr = document.getElementById('a1').value;
-console.log(arr)
+function myFunction() {
+    //var btnV = ""
+    var btnValue = document.getElementById("btn1").value;
+    //btnV = btnValue;
+    //document.getElementById("puzz1").innerHTML = btnValue;
+    console.log(btnValue);
+}
 
 
 //searching the name and if present then print success else error
+
+function validateAnswer() {
+    var text, x;
+    for (let i = 0; i < name.length; i++) {
+        if (btnV === name[i]) { // btnV[i] will match  array input value with the initialized array
+            return true;
+        } else
+            return false;
+    }
+}
 
 //code to move to the next question
