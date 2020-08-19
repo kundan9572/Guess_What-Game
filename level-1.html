@@ -1,114 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" type="module"></script>
     <title>level-1</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <audio id="myAudio">
+      <!-- Add control loop to keep audio playing continuously-->
+      <source src="./music/space_rangers_awakening.mp3" type="audio/mpeg" />
+    </audio>
+
     <div id="color-overlay">
-        <div>
-            <div id="ques1">
-                <img src="./images/tajmahal.jfif" alt="ques-1" height="300px" width="300px"><br>
-                <div id="txt1">
-                    <input type="text" id="puzz1">
-                </div>
-                <div id="btnf1">
-                    <input type="button" onclick="myFunction()" value="T" id="btn1">
-                    <input type="button" onclick="myFunction()" value="A" id="btn2">
-                    <input type="button" value="J" id="btn3">
-                    <input type="button" value="M" id="btn4">
-                    <input type="button" value="A" id="btn5">
-                    <input type="button" value="H" id="btn6">
-                    <input type="button" value="A" id="btn7">
-                    <input type="button" value="L" id="btn8">
+      <div id="app"></div>
+      <div>
+        <div id="ques1">
+          <img
+            src="./images/tajmahal.jfif"
+            alt="ques-1"
+            height="300px"
+            width="300px"
+          /><br />
+          <div id="txt1">
+            <input type="text" id="text" />
+          </div>
+          <div id="btnf1">
+            <input
+              type="submit"
+              onclick="start(this.value)"
+              value="T"
+              id="btn"
+            />
+            <input
+              type="submit"
+              onclick="start(this.value)"
+              value="A"
+              id="btn"
+            />
+            <input
+              type="button"
+              onclick="start(this.value)"
+              value="J"
+              id="btn"
+            />
+            <input
+              type="button"
+              onclick="start(this.value)"
+              value="M"
+              id="btn"
+            />
+            <input
+              type="button"
+              onclick="start(this.value)"
+              value="A"
+              id="btn"
+            />
+            <input
+              type="button"
+              onclick="start(this.value)"
+              value="H"
+              id="btn"
+            />
+            <input
+              type="button"
+              onclick="start(this.value)"
+              value="A"
+              id="btn"
+            />
+            <input
+              type="button"
+              onclick="start(this.value)"
+              value="L"
+              id="btn"
+            />
+          </div>
 
-                </div>
-                <input type="Submit" name="submit" id="sbtn1">
-            </div>
+          <input type="Submit" name="submit" id="sbtn1" />
+          <input type="reset" name="reset" id="reset1" />
         </div>
+      </div>
 
-        <div>
-            <div id="ques2">
-                <img src="./images/Dhoni.jfif" alt="ques-2" height="300px" width="300px"><br>
-                <div><input type="text" id="puzz2"></div>
+      <div>
+        <div id="ques2">
+          <img
+            src="./images/Dhoni.jfif"
+            alt="ques-2"
+            height="300px"
+            width="300px"
+          /><br />
+          <div><input type="text" id="puzz2" /></div>
 
-                <div id="btnf2">
-                    <input type="button" value="M" id="btn9">
-                    <input type="button" value="S" id="btn10">
-                    <input type="button" value="D" id="btn11">
-                    <input type="button" value="H" id="btn12">
-                    <input type="button" value="O" id="btn13">
-                    <input type="button" value="N" id="btn14">
-                    <input type="button" value="I" id="btn15">
-                </div>
-                <input type="Submit" name="submit" id="sbtn2">
-            </div>
+          <div id="btnf2">
+            <input type="button" value="M" id="btn9" />
+            <input type="button" value="S" id="btn10" />
+            <input type="button" value="D" id="btn11" />
+            <input type="button" value="H" id="btn12" />
+            <input type="button" value="O" id="btn13" />
+            <input type="button" value="N" id="btn14" />
+            <input type="button" value="I" id="btn15" />
+          </div>
+          <input type="Submit" name="submit" id="sbtn2" />
         </div>
+      </div>
 
-        <div>
-
-            <div id="ques3">
-                <img src="./images/Hawa Mahal.jfif" alt="ques-3" height="300px" width="300px"><br>
-                <div><input type="text" id="puzz3"></div>
-                <div>
-                    <input type="button" value="H">
-                    <input type="button" value="A">
-                    <input type="button" value="W">
-                    <input type="button" value="A">
-                    <input type="button" value="M">
-                    <input type="button" value="A">
-                    <input type="button" value="H">
-                    <input type="button" value="A">
-                    <input type="button" value="L">
-
-                </div>
-                <input type="Submit" name="submit" id="sbtn3">
-            </div>
+      <div>
+        <div id="ques3">
+          <img
+            src="./images/Hawa Mahal.jfif"
+            alt="ques-3"
+            height="300px"
+            width="300px"
+          /><br />
+          <div><input type="text" id="puzz3" /></div>
+          <div>
+            <input type="button" value="H" />
+            <input type="button" value="A" />
+            <input type="button" value="W" />
+            <input type="button" value="A" />
+            <input type="button" value="M" />
+            <input type="button" value="A" />
+            <input type="button" value="H" />
+            <input type="button" value="A" />
+            <input type="button" value="L" />
+          </div>
+          <input type="Submit" name="submit" id="sbtn3" />
         </div>
-        <div>
-            <div id="ques4">
-                <img src="./images/ladakh.jfif" alt="ques-4" height="300px" width="300px"><br>
-                <div><input type="text" id="puzz4"></div>
+      </div>
+      <div>
+        <div id="ques4">
+          <img
+            src="./images/ladakh.jfif"
+            alt="ques-4"
+            height="300px"
+            width="300px"
+          /><br />
+          <div><input type="text" id="puzz4" /></div>
 
-                <div>
-                    <input type="button" value="L">
-                    <input type="button" value="A">
-                    <input type="button" value="D">
-                    <input type="button" value="A">
-                    <input type="button" value="K">
-                    <input type="button" value="H">
-
-                </div>
-                <input type="Submit" name="submit" id="sbtn4">
-            </div>
+          <div>
+            <input type="button" value="L" />
+            <input type="button" value="A" />
+            <input type="button" value="D" />
+            <input type="button" value="A" />
+            <input type="button" value="K" />
+            <input type="button" value="H" />
+          </div>
+          <input type="Submit" name="submit" id="sbtn4" />
         </div>
-        <div>
-            <div id="ques5">
-                <img src="./images/harryPotter.jfif" alt="ques-5" height="300px" width="300px"><br>
-                <div><input type="text" id="puzz5"></div>
-                <div>
-                    <input type="button" value="H">
-                    <input type="button" value="A">
-                    <input type="button" value="R">
-                    <input type="button" value="R">
-                    <input type="button" value="Y">
-                    <input type="button" value="P">
-                    <input type="button" value="O">
-                    <input type="button" value="T">
-                    <input type="button" value="T">
-                    <input type="button" value="E">
-                    <input type="button" value="R">
-
-                </div>
-                <input type="Submit" name="submit" id="sbtn5">
-            </div>
+      </div>
+      <div>
+        <div id="ques5">
+          <img
+            src="./images/harryPotter.jfif"
+            alt="ques-5"
+            height="300px"
+            width="300px"
+          /><br />
+          <div><input type="text" id="puzz5" /></div>
+          <div>
+            <input type="button" value="H" />
+            <input type="button" value="A" />
+            <input type="button" value="R" />
+            <input type="button" value="R" />
+            <input type="button" value="Y" />
+            <input type="button" value="P" />
+            <input type="button" value="O" />
+            <input type="button" value="T" />
+            <input type="button" value="T" />
+            <input type="button" value="E" />
+            <input type="button" value="R" />
+          </div>
+          <input type="Submit" name="submit" id="sbtn5" />
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
+  <script src="./app.js"></script>
 </html>
