@@ -1,65 +1,146 @@
-const name = ["TAJMAHAL", "MSDHONI", "LADAKH", 'HAWAMAHAL', 'HARRYPOTER', 'PARLIAMENT', 'SACHINTENDULKAR', 'STARWAR', 'SOCCER', 'SOLARSYSTEM', 'APJABDULKALAM', 'DILBECHARA', 'ANACONDA', 'BABURAO']
+const name = [
+  "TAJMAHAL",
+  "MSDHONI",
+  "LADAKH",
+  "HAWAMAHAL",
+  "HARRYPOTER",
+  "PARLIAMENT",
+  "SACHINTENDULKAR",
+  "STARWAR",
+  "SOCCER",
+  "SOLARSYSTEM",
+  "APJABDULKALAM",
+  "DILBECHARA",
+  "ANACONDA",
+  "BABURAO",
+];
 
+console.log(name[0]);
 
-// code to generate random color 
+// code to generate random color
 
 function generateRandomColor() {
-    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
 
 function changeBackgroundColor() {
-    let BgColor = document.getElementById('color-overlay');
-    BgColor.style.backgroundColor = generateRandomColor();
+  let BgColor = document.getElementById("color-overlay");
+  BgColor.style.backgroundColor = generateRandomColor();
 }
 
 function checkBg() {
-    generateRandomColor();
-    changeBackgroundColor();
+  generateRandomColor();
+  changeBackgroundColor();
 }
 
-setInterval(checkBg, 100)
+setInterval(checkBg, 100);
 
 // Adding background music
 
-x = document.getElementById("myAudio").play();
-
-
-
+var music = document.getElementById("myAudio");
 
 // code to take input when button is ckicked and stored in array
 var btnvalue = document.getElementById("btn").value;
 var textvalue = document.getElementById("text");
-var submit
-console.log(btnvalue);
-console.log(textvalue);
+//console.log(btnvalue);
+//console.log(textvalue);
 
 var temp = "";
 var count = 0;
 
 function start(value) {
-    temp += value;
-    textvalue.value = temp;
+  temp += value;
+  textvalue.value = temp;
 }
-//submit button 
 
-document.getElementById("sbtn1").addEventListener("click", submitvalue)
+var btn1value = document.getElementById("btn1").value;
+var text1value = document.getElementById("puzz2");
+var temp1 = "";
+function start1(value) {
+  temp1 += value;
+  text1value.value = temp1;
+}
 
-var n = temp;
+var btn2value = document.getElementById("btn2").value;
+var text2value = document.getElementById("puzz3");
+var temp2 = "";
+function start2(value) {
+  temp2 += value;
+  text2value.value = temp2;
+}
+
+var btn3value = document.getElementById("btn3").value;
+var text3value = document.getElementById("puzz4");
+var temp3 = "";
+function start3(value) {
+  temp3 += value;
+  text3value.value = temp3;
+}
+
+var btn4value = document.getElementById("btn4").value;
+var text4value = document.getElementById("puzz5");
+var temp4 = "";
+function start4(value) {
+  temp4 += value;
+  text4value.value = temp4;
+}
+
+//submit button
+
+document.getElementById("sbtn1").addEventListener("click", validate);
+document.getElementById("sbtn2").addEventListener("click", validate1);
+document.getElementById("sbtn3").addEventListener("click", validate2);
+document.getElementById("sbtn4").addEventListener("click", validate3);
+document.getElementById("sbtn5").addEventListener("click", validate4);
+
 //searching the name and if present then print success else error
 
-function submitvalue() {
-    if (name.include(n))
-        alert("Correct Answer");
-    else
-        alert("Wrong Answer")
+function validate() {
+  for (let i = 0; i < name.length; i++) {
+    if (temp == name[i]) {
+      alert("Correct Answer");
+
+      break;
+    }
+  }
+  return alert("Wrong Answer");
 }
 
+function validate1() {
+  for (let i = 0; i < name.length; i++) {
+    if (temp1 == name[i]) {
+      return alert("Correct Answer");
+    }
+  }
+  return alert("Wrong Answer");
+}
 
+function validate2() {
+  for (let i = 0; i < name.length; i++) {
+    if (temp2 == name[i]) {
+      alert("Correct Answer");
+    }
+  }
+  return alert("Wrong Answer");
+}
 
+function validate3() {
+  for (let i = 0; i < name.length; i++) {
+    if (temp3 == name[i]) {
+      alert("Correct Answer");
+    }
+  }
+  return alert("Wrong Answer");
+}
 
-
-
-
+function validate4() {
+  for (let i = 0; i < name.length; i++) {
+    if (temp4 == name[i]) {
+      alert("Correct Answer");
+    }
+  }
+  return alert("Wrong Answer");
+}
 
 //code to move to the next question
 
@@ -87,9 +168,6 @@ function submitvalue() {
 //     clearInterval(id);
 // }
 
-
-
-
 // timer  .............................................................
 
 // Credit: Mateusz Rybczonec
@@ -99,17 +177,17 @@ const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 
 const COLOR_CODES = {
-    info: {
-        color: "green"
-    },
-    warning: {
-        color: "orange",
-        threshold: WARNING_THRESHOLD
-    },
-    alert: {
-        color: "red",
-        threshold: ALERT_THRESHOLD
-    }
+  info: {
+    color: "green",
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD,
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD,
+  },
 };
 
 const TIME_LIMIT = 30;
@@ -145,69 +223,65 @@ document.getElementById("app").innerHTML = `
 startTimer();
 
 function onTimesUp() {
-    clearInterval(timerInterval);
+  clearInterval(timerInterval);
 }
 
 function startTimer() {
-    timerInterval = setInterval(() => {
-        timePassed = timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
-        document.getElementById("base-timer-label").innerHTML = formatTime(
-            timeLeft
-        );
-        setCircleDasharray();
-        setRemainingPathColor(timeLeft);
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
 
-        if (timeLeft === 0) {
-            onTimesUp();
-        }
-    }, 1000);
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
 }
 
 function formatTime(time) {
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
 
-    if (seconds < 10) {
-        seconds = `0${seconds}`;
-    }
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
 
-    return `${minutes}:${seconds}`;
+  return `${minutes}:${seconds}`;
 }
 
 function setRemainingPathColor(timeLeft) {
-    const {
-        alert,
-        warning,
-        info
-    } = COLOR_CODES;
-    if (timeLeft <= alert.threshold) {
-        document
-            .getElementById("base-timer-path-remaining")
-            .classList.remove(warning.color);
-        document
-            .getElementById("base-timer-path-remaining")
-            .classList.add(alert.color);
-    } else if (timeLeft <= warning.threshold) {
-        document
-            .getElementById("base-timer-path-remaining")
-            .classList.remove(info.color);
-        document
-            .getElementById("base-timer-path-remaining")
-            .classList.add(warning.color);
-    }
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
 }
 
 function calculateTimeFraction() {
-    const rawTimeFraction = timeLeft / TIME_LIMIT;
-    return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
 }
 
 function setCircleDasharray() {
-    const circleDasharray = `${(
+  const circleDasharray = `${(
     calculateTimeFraction() * FULL_DASH_ARRAY
   ).toFixed(0)} 283`;
-    document
-        .getElementById("base-timer-path-remaining")
-        .setAttribute("stroke-dasharray", circleDasharray);
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
 }

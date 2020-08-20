@@ -5,102 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" type="module"></script>
-    <title>level-1</title>
+    <title>level-2 </title>
 </head>
 
 <body>
+    <audio id="myAudio">
+        <!-- Add control loop to keep audio playing continuously-->
+        <source src="./music/space_rangers_awakening.mp3" type="audio/mpeg" />
+    </audio>
     <div id="color-overlay">
-        <div id="ques1">
-            <img src="./images/parliament.jfif" alt="ques-1" height="300px" width="300px"><br>
-            <input type="text" id="puzz21">
-            <div>
-                <input type="button" value="P">
-                <input type="button" value="A">
-                <input type="button" value="R">
-                <input type="button" value="L">
-                <input type="button" value="I">
-                <input type="button" value="A">
-                <input type="button" value="M">
-                <input type="button" value="E">
-                <input type="button" value="N">
-                <input type="button" value="T">
-
+        <div id="app"></div>
+        <div>
+            <div id="ques1">
+                <img src="./images/parliament.jfif" alt="ques-1" height="300px" width="300px"><br />
+                <div> <input type="text" id="text"></div>
+                <div id="btnf1">
+                    <input type="submit" value="P" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="A" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="R" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="L" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="I" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="A" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="M" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="E" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="N" onclick="start(this.value)" id="btn">
+                    <input type="submit" value="T" onclick="start(this.value)" id="btn">
+                </div>
+                <input type="Submit" name="submit" id="sbtn1" onclick="validate()" />
             </div>
         </div>
 
 
         <div id="ques2">
             <img src="./images/Sachin Tendulkar.jfif" alt="ques-2" height="300px" width="300px"><br>
-            <input type="text" id="puzz22">
+            <input type="text" id="puzz2">
             <div>
-                <input type="button" value="S">
-                <input type="button" value="A">
-                <input type="button" value="C">
-                <input type="button" value="H">
-                <input type="button" value="I">
-                <input type="button" value="N">
-                <input type="button" value="T">
-                <input type="button" value="E">
-                <input type="button" value="N">
-                <input type="button" value="D">
-                <input type="button" value="U">
-                <input type="button" value="L">
-                <input type="button" value="D">
-                <input type="button" value="A">
-                <input type="button" value="R">
+                <input type="submit" value="S" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="A" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="C" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="H" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="I" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="N" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="T" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="E" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="N" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="D" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="U" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="L" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="D" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="A" onclick="start1(this.value)" id="btn1">
+                <input type="submit" value="R" onclick="start1(this.value)" id="btn1">
 
             </div>
+            <input type="Submit" name="submit" id="sbtn1" onclick="validate1()" />
+
         </div>
 
         <div id="ques3">
             <img src="./images/StarWar.jpg" alt="ques-3" height="300px" width="300px"><br>
-            <input type="text" id="puzz23">
+            <input type="text" id="puzz3">
             <div>
-                <input type="button" value="S">
-                <input type="button" value="T">
-                <input type="button" value="A">
-                <input type="button" value="R">
-                <input type="button" value="W">
-                <input type="button" value="A">
-                <input type="button" value="R">
+                <input type="submit" value="S" onclick="start2(this.value)" id="btn2">
+                <input type="submit" value="T" onclick="start2(this.value)" id="btn2">
+                <input type="submit" value="A" onclick="start2(this.value)" id="btn2">
+                <input type="submit" value="R" onclick="start2(this.value)" id="btn2">
+                <input type="submit" value="W" onclick="start2(this.value)" id="btn2">
+                <input type="submit" value="A" onclick="start2(this.value)" id="btn2">
+                <input type="submit" value="R" onclick="start2(this.value)" id="btn2">
 
             </div>
+            <input type="Submit" name="submit" id="sbtn1" onclick="validate2()" />
+
         </div>
 
         <div id="ques4">
             <img src="./images/soccer.jfif" alt="ques-4" height="300px" width="300px"><br>
-            <input type="text" id="puzz24">
+            <input type="text" id="puzz4">
             <div>
-                <input type="button" value="S">
-                <input type="button" value="O">
-                <input type="button" value="C">
-                <input type="button" value="C">
-                <input type="button" value="E">
-                <input type="button" value="R">
+                <input type="submit" value="S" onclick="start3(this.value)" id="btn3">
+                <input type="submit" value="O" onclick="start3(this.value)" id="btn3">
+                <input type="submit" value="C" onclick="start3(this.value)" id="btn3">
+                <input type="submit" value="C" onclick="start3(this.value)" id="btn3">
+                <input type="submit" value="E" onclick="start3(this.value)" id="btn3">
+                <input type="submit" value="R" onclick="start3(this.value)" id="btn3">
 
             </div>
+            <input type="Submit" name="submit" id="sbtn1" onclick="validate3()" />
+
         </div>
 
         <div id="ques5">
             <img src="./images/solar_system.jpg" alt="ques-5" height="300px" width="300px"><br>
-            <input type="text" id="puzz25">
+            <input type="text" id="puzz5">
             <div>
-                <input type="button" value="S">
-                <input type="button" value="O">
-                <input type="button" value="L">
-                <input type="button" value="A">
-                <input type="button" value="R">
-                <input type="button" value="S">
-                <input type="button" value="Y">
-                <input type="button" value="S">
-                <input type="button" value="T">
-                <input type="button" value="E">
-                <input type="button" value="M">
+                <input type="submit" value="S" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="O" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="L" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="A" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="R" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="S" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="Y" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="S" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="T" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="E" onclick="start4(this.value)" id="btn4">
+                <input type="submit" value="M" onclick="start4(this.value)" id="btn4">
 
             </div>
+            <input type="Submit" name="submit" id="sbtn1" onclick="validate4()" />
+
         </div>
     </div>
 </body>
+<script src="./app.js"></script>
+
 
 </html>
