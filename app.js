@@ -3,7 +3,7 @@ const name = [
   "MSDHONI",
   "LADAKH",
   "HAWAMAHAL",
-  "HARRYPOTER",
+  "HARRYPOTTER",
   "PARLIAMENT",
   "SACHINTENDULKAR",
   "STARWAR",
@@ -19,21 +19,21 @@ console.log(name[0]);
 
 // code to generate random color
 
-function generateRandomColor() {
-  return "#" + Math.floor(Math.random() * 16777215).toString(16);
-}
+// function generateRandomColor() {
+//   return "#" + Math.floor(Math.random() * 16777215).toString(16);
+// }
 
-function changeBackgroundColor() {
-  let BgColor = document.getElementById("color-overlay");
-  BgColor.style.backgroundColor = generateRandomColor();
-}
+// function changeBackgroundColor() {
+//   let BgColor = document.getElementById("color-overlay");
+//   BgColor.style.backgroundColor = generateRandomColor();
+// }
 
-function checkBg() {
-  generateRandomColor();
-  changeBackgroundColor();
-}
+// function checkBg() {
+//   generateRandomColor();
+//   changeBackgroundColor();
+// }
 
-setInterval(checkBg, 100);
+// setInterval(checkBg, 100);
 
 // Adding background music
 
@@ -99,7 +99,6 @@ function validate() {
   for (let i = 0; i < name.length; i++) {
     if (temp == name[i]) {
       alert("Correct Answer");
-
       break;
     }
   }
@@ -110,6 +109,7 @@ function validate1() {
   for (let i = 0; i < name.length; i++) {
     if (temp1 == name[i]) {
       return alert("Correct Answer");
+      break;
     }
   }
   return alert("Wrong Answer");
@@ -119,6 +119,7 @@ function validate2() {
   for (let i = 0; i < name.length; i++) {
     if (temp2 == name[i]) {
       alert("Correct Answer");
+      break;
     }
   }
   return alert("Wrong Answer");
@@ -128,6 +129,7 @@ function validate3() {
   for (let i = 0; i < name.length; i++) {
     if (temp3 == name[i]) {
       alert("Correct Answer");
+      break;
     }
   }
   return alert("Wrong Answer");
@@ -137,11 +139,44 @@ function validate4() {
   for (let i = 0; i < name.length; i++) {
     if (temp4 == name[i]) {
       alert("Correct Answer");
+      break;
     }
   }
   return alert("Wrong Answer");
 }
 
+// code to delete the textbox when we click on reject button
+
+document.getElementById("reject1").addEventListener("click", reject1);
+document.getElementById("reject2").addEventListener("click", reject2);
+document.getElementById("reject3").addEventListener("click", reject3);
+document.getElementById("reject4").addEventListener("click", reject4);
+document.getElementById("reject5").addEventListener("click", reject5);
+
+function reject1() {
+  temp = [];
+  textvalue.value = temp;
+}
+
+function reject2() {
+  temp1 = [];
+  text1value.value = temp1;
+}
+
+function reject3() {
+  temp2 = [];
+  text2value.value = temp2;
+}
+
+function reject4() {
+  temp3 = [];
+  text3value.value = temp3;
+}
+
+function reject5() {
+  temp4 = [];
+  text4value.value = temp4;
+}
 //code to move to the next question
 
 //code to show the timer or stopwatch

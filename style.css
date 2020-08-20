@@ -1,80 +1,102 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-image: url(./images/backg.jpg);
+  /*background-image: url("./images/b2.jpg");*/
   height: 100vh;
   width: 100%;
   background-size: cover;
+  background-color: cyan;
 }
 
 #color-overlay {
   margin: 0;
   padding: 0;
-  opacity: 0.8;
   text-align: center;
   color: white;
 }
 
+#levelContainer {
+  display: flex;
+  height: 100px;
+  width: 100px;
+}
+
+#levelContainer img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  margin: 180px 50px;
+  border: dotted 10px black;
+  background-color: orangered;
+}
+
 #levelStyle {
-  padding: 1px;
-  font-size: 20px;
+  padding: 50px;
+  font-size: 40px;
   text-align: center;
   background-color: orangered;
-  margin: 0;
+  margin: 10000px 40px;
   text-decoration: none;
+  border: dashed 5px black;
 }
+
+/* decorating buttons and text area */
 
 img {
-  margin: 70px;
-  opacity: 2;
+  height: 400px;
+  width: 600px;
+  margin: 20px;
+  border: solid 5px orangered;
 }
 
+#text,
 #puzz1,
-#puzz2 {
+#puzz2,
+#puzz3,
+#puzz4,
+#puzz5 {
   height: 50px;
-  margin: 15px;
+  margin: 10px;
   width: 400px;
   color: black;
 }
 
 #btnf1,
-#btnf2 {
+#btnf2,
+#btnf3,
+#btnf4,
+#btnf5 {
   margin: 20px;
 }
-
+#btn,
 #btn1,
 #btn2,
 #btn3,
 #btn4,
 #btn5,
 #btn6,
-#btn7,
-#btn8,
-#btn9,
-#btn10,
-#btn11,
-#btn12,
-#btn13,
-#btn14,
-#btn15 {
+#btn7 {
   height: 50px;
   width: 40px;
 }
 
 #sbtn1,
-#sbtn2 {
+#sbtn2,
+#sbtn3,
+#sbtn4,
+#sbtn5,
+#reject1,
+#reject2,
+#reject3,
+#reject4,
+#reject5 {
+  margin: 20px;
   height: 50px;
   width: 250px;
   background-color: orangered;
-
 }
-
-
-
-
-
-
-
 
 /* ................................timer animation  ..................................*/
 
