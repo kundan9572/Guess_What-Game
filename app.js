@@ -37,7 +37,10 @@ console.log(name[0]);
 
 // Adding background music
 
-var music = document.getElementById("myAudio");
+//   <audio id="myAudio" controls="controls"
+//onloadeddata="var audioPlayer=this; setTimeout(function(){ audioPlayer.play();},6000) ">
+
+var music = document.getElementById("myAudio").play();
 
 // code to take input when button is ckicked and stored in array
 var btnvalue = document.getElementById("btn").value;
@@ -225,7 +228,7 @@ const COLOR_CODES = {
   },
 };
 
-const TIME_LIMIT = 30;
+const TIME_LIMIT = 28;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;

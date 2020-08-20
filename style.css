@@ -50,10 +50,17 @@ img {
   margin: 20px;
   border: solid 5px orangered;
 }
+#puzz2 {
+  height: 50px;
+  margin: 10px;
+  width: 400px;
+  color: black;
+  border: outset 5px grey;
+  font-size: 40px;
+}
 
 #text,
 #puzz1,
-#puzz2,
 #puzz3,
 #puzz4,
 #puzz5 {
@@ -61,6 +68,8 @@ img {
   margin: 10px;
   width: 400px;
   color: black;
+  border: outset 5px grey;
+  font-size: 50px;
 }
 
 #btnf1,
