@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="myAudio">
+        <!-- Add control loop to keep audio playing continuously-->
+        <source src="./music/space_rangers_inside.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div>
+        <div id="color-overlay">
+            <div id="app"></div>
+            <div id="ques4">
+                <img src="./images/pic3.jpg" alt="ques-4" height="300px" width="300px" /><br />
+                <div id="btncol">
+                    <div><input type="text" id="puzz" /></div>
+
+                    <div id="btnf4">
+                        <input type="submit" onclick="start(this.value)" value="K" id="btn" />
+                        <input type="submit" onclick="start(this.value)" value="L" id="btn" />
+                        <input type="submit" onclick="start(this.value)" value="D" id="btn" />
+                        <input type="submit" onclick="start(this.value)" value="A" id="btn" />
+                        <input type="submit" onclick="start(this.value)" value="A" id="btn" />
+                        <input type="submit" onclick="start(this.value)" value="H" id="btn" />
+                    </div>
+                    <div>
+                        <input type="Submit" value="SUBMIT" id="sbtn" onclick="validate()" />
+                        <input type="submit" value="REJECT" id="reject" onclick="reject()" />
+                        <a href="./ques5.html"> <input type="submit" value="Click to go next " id="skip"
+                                onclick="reject()"> </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app1.js"></script>
+
+</html>

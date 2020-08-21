@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="myAudio">
+        <!-- Add control loop to keep audio playing continuously-->
+        <source src="./music/space_rangers_inside.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="color-overlay">
+        <div id="app"></div>
+        <div>
+            <div id="ques1">
+                <img src="./images/Sachin Tendulkar.jfif" alt="ques-1" height="300px" width="300px" /><br />
+                <div id="btncol">
+                    <div>
+                        <input type="text" id="puzz" />
+                    </div>
+                    <div id="btnf1">
+                        <input type="submit" value="A" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="I" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="T" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="S" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="N" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="U" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="K" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="R" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="A" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="L" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="C" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="E" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="D" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="N" onclick="start(this.value)" id="btn">
+                        <input type="submit" value="H" onclick="start(this.value)" id="btn">
+                    </div>
+                    <div>
+                        <input type="Submit" value="SUBMIT" id="sbtn" onclick="validate()" />
+                        <input type="reset" value="REJECT" id="reject" onclick="reject()" />
+                        <a href="./ques8.html"> <input type="submit" value="Click to go next " id="skip"
+                                onclick="reject()">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app1.js"></script>
+
+</html>

@@ -50,6 +50,11 @@ img {
   margin: 20px;
   border: solid 5px orangered;
 }
+
+#btncol {
+  background-color: lightblue;
+}
+
 #puzz2 {
   height: 50px;
   margin: 10px;
@@ -60,6 +65,7 @@ img {
 }
 
 #text,
+#puzz,
 #puzz1,
 #puzz3,
 #puzz4,
@@ -79,6 +85,7 @@ img {
 #btnf5 {
   margin: 20px;
 }
+
 #btn,
 #btn1,
 #btn2,
@@ -91,11 +98,14 @@ img {
   width: 40px;
 }
 
+#skip,
+#sbtn,
 #sbtn1,
 #sbtn2,
 #sbtn3,
 #sbtn4,
 #sbtn5,
+#reject,
 #reject1,
 #reject2,
 #reject3,

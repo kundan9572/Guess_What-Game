@@ -15,7 +15,6 @@ const name = [
   "BABURAO",
 ];
 
-console.log(name[0]);
 
 // code to generate random color
 
@@ -40,14 +39,11 @@ console.log(name[0]);
 //   <audio id="myAudio" controls="controls"
 //onloadeddata="var audioPlayer=this; setTimeout(function(){ audioPlayer.play();},6000) ">
 
-var music = document.getElementById("myAudio").play();
+//var music = document.getElementById("myAudio").play();
 
 // code to take input when button is ckicked and stored in array
 var btnvalue = document.getElementById("btn").value;
 var textvalue = document.getElementById("text");
-//console.log(btnvalue);
-//console.log(textvalue);
-
 var temp = "";
 var count = 0;
 
@@ -59,6 +55,7 @@ function start(value) {
 var btn1value = document.getElementById("btn1").value;
 var text1value = document.getElementById("puzz2");
 var temp1 = "";
+
 function start1(value) {
   temp1 += value;
   text1value.value = temp1;
@@ -67,6 +64,7 @@ function start1(value) {
 var btn2value = document.getElementById("btn2").value;
 var text2value = document.getElementById("puzz3");
 var temp2 = "";
+
 function start2(value) {
   temp2 += value;
   text2value.value = temp2;
@@ -75,6 +73,7 @@ function start2(value) {
 var btn3value = document.getElementById("btn3").value;
 var text3value = document.getElementById("puzz4");
 var temp3 = "";
+
 function start3(value) {
   temp3 += value;
   text3value.value = temp3;
@@ -83,6 +82,7 @@ function start3(value) {
 var btn4value = document.getElementById("btn4").value;
 var text4value = document.getElementById("puzz5");
 var temp4 = "";
+
 function start4(value) {
   temp4 += value;
   text4value.value = temp4;
@@ -97,15 +97,20 @@ document.getElementById("sbtn4").addEventListener("click", validate3);
 document.getElementById("sbtn5").addEventListener("click", validate4);
 
 //searching the name and if present then print success else error
+var abc = 0;
 
 function validate() {
   for (let i = 0; i < name.length; i++) {
+
     if (temp == name[i]) {
       alert("Correct Answer");
       break;
+    } else {
+      abc++;
     }
   }
-  return alert("Wrong Answer");
+  if (abc == 15)
+    return alert("Wrong Answer");
 }
 
 function validate1() {
@@ -292,7 +297,11 @@ function formatTime(time) {
 }
 
 function setRemainingPathColor(timeLeft) {
-  const { alert, warning, info } = COLOR_CODES;
+  const {
+    alert,
+    warning,
+    info
+  } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     document
       .getElementById("base-timer-path-remaining")
@@ -322,4 +331,25 @@ function setCircleDasharray() {
   document
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
+}
+
+// Function to move from one div to another
+
+// function moveContentTo2() {
+//   document.getElementById("ques2") = document.getElementById("ques1");
+//   document.getElementById("ques1").innerHTML = "";
+// }
+// // function moveContentTo1()
+// // {
+//     document.getElementById("div1").innerHTML = document.getElementById("div2").innerHTML;
+//     document.getElementById("div2").innerHTML = '';
+// }
+
+function myFunction() {
+  var x = document.getElementById("hide1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }

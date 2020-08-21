@@ -20,109 +20,120 @@
     <div>
       <div id="ques1">
         <img src="./images/pic1.jpg" alt="ques-1" height="300px" width="300px" /><br />
-        <div>
-          <input type="text" id="text" />
-        </div>
-        <div id="btnf1">
-          <input type="submit" onclick="start(this.value)" value="T" id="btn" />
-          <input type="submit" onclick="start(this.value)" value="L" id="btn" />
-          <input type="button" onclick="start(this.value)" value="M" id="btn" />
-          <input type="button" onclick="start(this.value)" value="A" id="btn" />
-          <input type="button" onclick="start(this.value)" value="J" id="btn" />
-          <input type="button" onclick="start(this.value)" value="H" id="btn" />
-          <input type="button" onclick="start(this.value)" value="A" id="btn" />
-          <input type="button" onclick="start(this.value)" value="A" id="btn" />
-        </div>
-        <div>
-          <input type="Submit" value="SUBMIT" id="sbtn1" onclick="validate()" />
-          <input type="reset" value="REJECT" id="reject1" onclick="reject1()" />
-        </div>
-
-      </div>
-    </div>
-
-    <div>
-      <div id="ques2">
-        <img src="./images/harryPotter.jfif" alt="ques-2" height="300px" width="300px" /><br />
-        <div><input type="text" id="puzz2" /></div>
-
-        <div id="btnf2">
-          <input type="submit" onclick="start1(this.value)" value="A" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="R" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="P" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="O" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="T" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="H" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="E" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="R" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="T" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="R" id="btn1" />
-          <input type="submit" onclick="start1(this.value)" value="Y" id="btn1" />
-
-        </div>
-        <div>
-          <input type="Submit" value="SUBMIT" id="sbtn2" onclick="validate1()" />
-          <input type="submit" value="REJECT" id="reject2" onclick="reject2()" />
+        <div id="btncol">
+          <div>
+            <input type="text" id="text" />
+          </div>
+          <div id="btnf1">
+            <input type="submit" onclick="start(this.value)" value="T" id="btn" />
+            <input type="submit" onclick="start(this.value)" value="L" id="btn" />
+            <input type="button" onclick="start(this.value)" value="M" id="btn" />
+            <input type="button" onclick="start(this.value)" value="A" id="btn" />
+            <input type="button" onclick="start(this.value)" value="J" id="btn" />
+            <input type="button" onclick="start(this.value)" value="H" id="btn" />
+            <input type="button" onclick="start(this.value)" value="A" id="btn" />
+            <input type="button" onclick="start(this.value)" value="A" id="btn" />
+          </div>
+          <div>
+            <input type="Submit" value="SUBMIT" id="sbtn1" onclick="validate()" onclick="moveContentTo2()" />
+            <input type="reset" value="REJECT" id="reject1" onclick="reject1()" />
+            <input type="submit" value="Click to go next " id="skip" onclick="myFunction()">
+          </div>
         </div>
       </div>
     </div>
+    <div id="hide1">
+      <div>
+        <div id="ques2">
+          <img src="./images/harryPotter.jfif" alt="ques-2" height="300px" width="300px" /><br />
+          <div id="btncol">
+            <div><input type="text" id="puzz2" /></div>
 
-    <div>
-      <div id="ques3">
-        <img src="./images/pic2.webp" alt="ques-3" height="300px" width="300px" /><br />
-        <div><input type="text" id="puzz3" /></div>
-        <div id="btnf3">
-          <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="L" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="M" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="H" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="H" id="btn2" />
-          <input type="submit" onclick="start2(this.value)" value="W" id="btn2" />
-        </div>
-        <div>
-          <input type="Submit" value="SUBMIT" id="sbtn3" onclick="validate2()" />
-          <input type="submit" value="REJECT" id="reject3" onclick="reject3()" />
+            <div id="btnf2">
+              <input type="submit" onclick="start1(this.value)" value="A" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="R" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="P" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="O" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="T" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="H" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="E" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="R" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="T" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="R" id="btn1" />
+              <input type="submit" onclick="start1(this.value)" value="Y" id="btn1" />
+
+            </div>
+            <div>
+              <input type="Submit" value="SUBMIT" id="sbtn2" onclick="validate1()" />
+              <input type="submit" value="REJECT" id="reject2" onclick="reject2()" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <div id="ques4">
-        <img src="./images/pic3.jpg" alt="ques-4" height="300px" width="300px" /><br />
-        <div><input type="text" id="puzz4" /></div>
 
-        <div id="btnf4">
-          <input type="submit" onclick="start3(this.value)" value="K" id="btn3" />
-          <input type="submit" onclick="start3(this.value)" value="L" id="btn3" />
-          <input type="submit" onclick="start3(this.value)" value="D" id="btn3" />
-          <input type="submit" onclick="start3(this.value)" value="A" id="btn3" />
-          <input type="submit" onclick="start3(this.value)" value="A" id="btn3" />
-          <input type="submit" onclick="start3(this.value)" value="H" id="btn3" />
-        </div>
-        <div>
-          <input type="Submit" value="SUBMIT" id="sbtn4" onclick="validate3()" />
-          <input type="submit" value="REJECT" id="reject4" onclick="reject4()" />
+      <div>
+        <div id="ques3">
+          <img src="./images/pic2.webp" alt="ques-3" height="300px" width="300px" /><br />
+          <div id="btncol">
+            <div><input type="text" id="puzz3" /></div>
+            <div id="btnf3">
+              <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="L" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="M" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="A" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="H" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="H" id="btn2" />
+              <input type="submit" onclick="start2(this.value)" value="W" id="btn2" />
+            </div>
+            <div>
+              <input type="Submit" value="SUBMIT" id="sbtn3" onclick="validate2()" />
+              <input type="submit" value="REJECT" id="reject3" onclick="reject3()" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <div id="ques5">
-        <img src="./images/Dhoni.jfif" alt="ques-5" height="300px" width="300px" /><br />
-        <div><input type="text" id="puzz5" /></div>
-        <div id="btnf5">
-          <input type="submit" onclick="start4(this.value)" value="S" id="btn4" />
-          <input type="submit" onclick="start4(this.value)" value="D" id="btn4" />
-          <input type="submit" onclick="start4(this.value)" value="M" id="btn4" />
-          <input type="submit" onclick="start4(this.value)" value="O" id="btn4" />
-          <input type="submit" onclick="start4(this.value)" value="N" id="btn4" />
-          <input type="submit" onclick="start4(this.value)" value="H" id="btn4" />
-          <input type="submit" onclick="start4(this.value)" value="I" id="btn4" />
+      <div>
+        <div id="ques4">
+          <img src="./images/pic3.jpg" alt="ques-4" height="300px" width="300px" /><br />
+          <div id="btncol">
+            <div><input type="text" id="puzz4" /></div>
+
+            <div id="btnf4">
+              <input type="submit" onclick="start3(this.value)" value="K" id="btn3" />
+              <input type="submit" onclick="start3(this.value)" value="L" id="btn3" />
+              <input type="submit" onclick="start3(this.value)" value="D" id="btn3" />
+              <input type="submit" onclick="start3(this.value)" value="A" id="btn3" />
+              <input type="submit" onclick="start3(this.value)" value="A" id="btn3" />
+              <input type="submit" onclick="start3(this.value)" value="H" id="btn3" />
+            </div>
+            <div>
+              <input type="Submit" value="SUBMIT" id="sbtn4" onclick="validate3()" />
+              <input type="submit" value="REJECT" id="reject4" onclick="reject4()" />
+            </div>
+          </div>
         </div>
-        <div>
-          <input type="Submit" value="SUBMIT" id="sbtn5" onclick="validate4()" />
-          <input type="submit" value="REJECT" id="reject5" onclick="reject5()" />
+      </div>
+      <div>
+        <div id="ques5">
+          <img src="./images/Dhoni.jfif" alt="ques-5" height="300px" width="300px" /><br />
+          <div id="btncol">
+            <div><input type="text" id="puzz5" /></div>
+            <div id="btnf5">
+              <input type="submit" onclick="start4(this.value)" value="S" id="btn4" />
+              <input type="submit" onclick="start4(this.value)" value="D" id="btn4" />
+              <input type="submit" onclick="start4(this.value)" value="M" id="btn4" />
+              <input type="submit" onclick="start4(this.value)" value="O" id="btn4" />
+              <input type="submit" onclick="start4(this.value)" value="N" id="btn4" />
+              <input type="submit" onclick="start4(this.value)" value="H" id="btn4" />
+              <input type="submit" onclick="start4(this.value)" value="I" id="btn4" />
+            </div>
+            <div>
+              <input type="Submit" value="SUBMIT" id="sbtn5" onclick="validate4()" />
+              <input type="submit" value="REJECT" id="reject5" onclick="reject5()" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
