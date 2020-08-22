@@ -39,8 +39,8 @@ function validate() {
         } else
             count++;
     }
-    //if (count === 14)
-    //  alert("Wrong Answer");
+    if (count === 14)
+        alert("Wrong Answer");
 }
 
 
@@ -115,6 +115,13 @@ function show() {
 
 function show1() {
     alert("TIME UP")
+    window.location.href = "level.html";
+
+
+    // function abc() {
+    //     google.script.run.withSuccessHandler(callback).processForm(document.forms[0]);
+    // }
+
 }
 
 function startTimer() {
@@ -184,19 +191,27 @@ function setCircleDasharray() {
 
 // to open it in full screen 
 
-var elem = document.documentElement;
+// var elem = document.documentElement;
 
-function openFullscreen() {
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) {
-        /* Firefox */
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) {
-        /* Chrome, Safari & Opera */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-        /* IE/Edge */
-        elem.msRequestFullscreen();
-    }
-}
+// function openFullscreen() {
+//     if (elem.requestFullscreen) {
+//         elem.requestFullscreen();
+//     } else if (elem.mozRequestFullScreen) {
+//         /* Firefox */
+//         elem.mozRequestFullScreen();
+//     } else if (elem.webkitRequestFullscreen) {
+//         /* Chrome, Safari & Opera */
+//         elem.webkitRequestFullscreen();
+//     } else if (elem.msRequestFullscreen) {
+//         /* IE/Edge */
+//         elem.msRequestFullscreen();
+//     }
+// }
+
+// function callback(ste) {
+//     if (ste == "true") {
+//         var a = document.getElementById('log');
+//         document.write(a.value);
+//         document.write('<a href="http://www.w3schools.com/js/js_htmldom_html.asp">do stuff</a>');
+//     } else document.write("false");
+// }
